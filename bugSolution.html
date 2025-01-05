@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      let element = document.getElementById("myDiv");
+      element.innerHTML = ""; // Clearing the div content
+      element.removeEventListener("click", myFunction); // Removing the event listener
+    }
+  </script>
+</body>
+</html>
